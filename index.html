@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Restaurant Website</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="title-container">
+                <a href="#" class="title">deleciouste</a>
+            </div>
+            <div class="toggleMenu" onclick="toggleMenu();"></div>
+            <ul class="nav-links">
+                <li class="nav-link active">Home</li>
+                <li class="nav-link">Services</li>
+                <li class="nav-link">Pricing</li>
+                <li class="nav-link">Menu</li>
+                <li class="nav-link">Contact</li>
+            </ul>
+        </nav>
+        <div class="big-image">
+            <h1 class="title">Delecious</h1>
+            <p class="tagline">A Taste Of Home.</p>
+        </div>
+    </header>
+
+    <main class="content">
+        <section class="about">
+            <h2 class="about-title">About</h2>
+            <p class="about-p">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat maiores sapiente
+                suscipit fugit omnis eaque aliquid corporis, in at id. Beatae, minima eos! 
+                Provident optio commodi quis facere magni aliquam ut non laboriosam labore inventore
+                dicta tenetur,qui debitis natus enim nam. Exercitationem, corporis amet.
+            </p>
+            <div class="cards">
+                <div class="card" data-aos="fade-right">
+                    <img src="img/card.jpg" class="card-image"/>
+                    <p class="description">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Magnam quis hic ducimus nobis doloremque aliquam!
+                    </p>
+                </div>
+                <div class="card" data-aos="fade-right">
+                    <img src="img/card-2.jpg" class="card-image"/>
+                    <p class="description">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Magnam quis hic ducimus nobis doloremque aliquam!
+                    </p>
+                </div>
+                <div class="card" data-aos="fade-right">
+                    <img src="img/card-3.jpg" class="card-image"/>
+                    <p class="description">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Magnam quis hic ducimus nobis doloremque aliquam!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="big-image big-image-2">
+            <h1 class="title" data-aos="zoom-in">Taste</h1>
+            <p class="tagline" data-aos="zoom-in-out">We Make The Ordinary, Extraordinary.</p>
+        </section>
+    </main>
+
+    <footer class="contact-container">
+        <div class="contact-grid">
+            <div class="contact-form">
+                <h2 class="form-title">Contact Us</h2>
+                <form class="contact" data-aos="zoom-out">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your Name"/>
+                    <label for="email">E-mail</label>
+                    <input type="text" id="email" placeholder="abc@xyz.com"/>
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Your message here..."></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="adress" data-aos="zoom-out">
+              <p>XXX, XYZ Street, ABC Road,<br/>XXXX, State</p>
+              <p>+ 216 00123456</p>
+            </div>
+    </footer>
+               <!--COPYRIGHT ABB. ANWAR-->
+               <script src="toggle.js"></script>
+</body>
+</html>

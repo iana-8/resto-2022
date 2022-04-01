@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Fira Sans', sans-serif;
+    overflow-x: hidden;
+}
+header{
+    background: rgb(12, 11, 11);
+    color: #fff;
+}
+.navbar{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .title{
+    font-family: 'Satisfy', cursive;
+    color: rgb(255, 217, 0);
+    font-size: 2em;
+    text-decoration: none;
+}
+.navbar .nav-links{
+    list-style: none;
+}
+.navbar .nav-links .nav-link{
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    margin: 0.25rem;
+    cursor: pointer;
+    transition: .1s linear;
+}
+.navbar .nav-links .nav-link:hover{
+    background: rgb(255, 60, 0);
+   
+}
+.big-image{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(0deg, rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+    url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.big-image .title{
+    font-size: 3.75em;
+    color: rgb(255, 60, 0);
+}
+.big-image .tagline{
+    font-size: 1.25em;
+    margin-top: 0.25rem;
+}
+.big-image-2{
+    background: linear-gradient(0deg, rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+    url(img/big-2.jpg);
+    color: #fff;
+}
+.about{
+    padding: 2.5rem 0;
+    background: rgb(224, 224, 224);
+}
+.about .about-title, .about-p{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+.about .about-p{
+    margin-top: 1.25rem;
+}
+.about .cards{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 3.75rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.25rem;
+    
+}
+
+.about .cards .card{
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(12, 11, 11);
+}
+.about .cards .card img {
+    width: 100%;
+}
+.about .cards .card .description{
+    color: #333;
+    padding: 0.75rem;
+}
+.contact-container {
+    background: rgb(12, 11, 11);
+    color: #fff;
+    padding: 2.5rem 0;
+}
+.contact-container .contact-grid{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2.5rem;
+}
+.contact-container .contact-grid .contact-form .contact{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.contact-container .contact-grid .contact-form .contact label{
+    margin-top: 1.25rem;
+    font-size: 0.8em;
+    color: #bbb;
+}
+.contact-container .contact-grid .contact-form .contact input,
+.contact-container .contact-grid .contact-form .contact textarea{
+    padding: 0.5rem;
+    border: 0;
+    background: rgb(32, 32, 32);
+}
+::placeholder{
+    color: rgb(100, 100, 100);
+}
+.contact-container .contact-grid .contact-form .contact button{
+    margin-top: 1.25rem;
+    border: 0;
+    padding: 0.5rem;
+    background: rgb(255, 217, 0);
+    border-radius: 0.25rem;
+}
+.contact-container .contact-grid .adress{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .toggleMenu {
+        position: absolute;
+        right: 3em;
+        background-image: url(img/bars.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 32px;
+        height: 32px;
+        z-index: 1000; 
+    }
+    .toggleMenu.active {
+        position: fixed;
+        background: url(img/close.png);
+        background-size: 32px;
+    }
+    .nav-links {
+    justify-content: center;
+    flex-direction: column;
+    transform: scale(1, 0);
+    transform-origin: top;
+    max-height: 0;
+    opacity: 0;
+    }
+    .nav-links.active {
+        display: flex;   
+        flex-direction: column;
+        text-align: center;    
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            transform: scale(1, 1);
+            max-height: 100%;
+            opacity: 1;
+            background-color: rgb(0,0,0);
+            z-index: 999;
+    }
+    .about .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem ;
+    }
+    .contact-container .contact-grid .adress{
+        line-height: 1.5em;
+     }
+}
